@@ -11,6 +11,13 @@ pub struct Job {
 }
 
 impl Job {
+    /// ```
+    /// # use artifice::*;
+    /// let job = Job::new_simple(
+    ///     JobType::Caption {text: "Hello, World!".to_string()},
+    ///     JobId(1337),
+    /// );
+    /// ```
     pub fn new_simple(ty: JobType, /* url: Arc<str>, */ id: JobId) -> Job {
         Self {
             parts: [JobPart {

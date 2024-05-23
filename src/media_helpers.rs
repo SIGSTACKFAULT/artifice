@@ -500,7 +500,7 @@ pub async fn rotate_and_flip(input: Media, rotation: Rotation) -> Result<Media, 
 
     // now rotate the media using filters!
     let output = FfmpegCommand::new()
-        .hwaccel(std::env::var("HW_ACCEL").unwrap_or("none".to_string()))
+        // .hwaccel(std::env::var("HW_ACCEL").unwrap_or("none".to_string()))
         .input(input.file_path.path.as_path().to_str().unwrap()) // input file
         .args([
             // set the dimensions

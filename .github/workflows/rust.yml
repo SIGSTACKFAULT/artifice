@@ -39,7 +39,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: dtolnay/rust-toolchain@stable
       with: {components: "rustdoc"}
-    - run: cargo rustdoc --tests
+    - run: cargo test --doc
   clippy:
     needs: ['build']
     runs-on: ubuntu-latest
